@@ -2,8 +2,6 @@
 Coursework Specification: <a href="https://coursera.cs.princeton.edu/algs4/assignments/percolation/specification.php" target="_blank">https://coursera.cs.princeton.edu/algs4/assignments/percolation/specification.php</a>
 
 
-My Score: 91
-
 The biggest improvement is change size of **WeightedQuickUnionUF** from `n*n` to `n*n+2`. In this case, I don't have to use nested `for-loops` (two `for` loops) to retrieve all connection relationships between current node and upside nodes (first line nodes) or between upside nodes and downside nodes (second line nodes).
 That is, `isFull` and `percolates` in **Percolation.java** will save more resources. 
 
