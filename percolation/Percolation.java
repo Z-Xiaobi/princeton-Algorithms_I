@@ -24,14 +24,14 @@ public class Percolation {
         wquf = new WeightedQuickUnionUF(n*n + 2);
     }
     
-    private void checkArguement(int row, int col) {
+    private void checkArgument(int row, int col) {
         if ((row <= 0) || (col <= 0) || (row > this.n) || (col > this.n))
             throw new IllegalArgumentException();
     }
 
     // opens the site (row, col) if it is not open already
     public void open(int row, int col) {
-        checkArguement(row, col);
+        checkArgument(row, col);
 
         if (!isOpen(row, col)) {
             grid[row-1][col-1] = true;
@@ -73,7 +73,7 @@ public class Percolation {
 
     // is the site (row, col) open?
     public boolean isOpen(int row, int col) {
-        checkArguement(row, col);
+        checkArgument(row, col);
         return grid[row-1][col-1];
     }
 
@@ -81,14 +81,14 @@ public class Percolation {
     // A full site is an open site that can be connected to an open site 
     // in the top row via a chain of neighboring (left, right, up, down) open sites. 
     public boolean isFull(int row, int col) {
-
+	checkArgument(row, col);
         return wquf.find(n*n) == wquf.find((row-1)*n+col-1); // Notice: return wrong values some time
     }
 
     // returns the number of open sites
     public int numberOfOpenSites() {
     	return siteCount;
-	}
+    }
 
     // does the system percolate?
     // We say the system percolates if there is a full site in the bottom row. 
