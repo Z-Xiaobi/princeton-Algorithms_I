@@ -13,7 +13,7 @@ Similarly, `percolates` just need to check two roots are connected (`WeightedQui
 I defined the roots as the last two nodes in array. You can choose other indexes as you like.
 
 
-Some Failed Checks of my code
+Some failed checks of my code:
 ```
 Test 18: check for backwash with predetermined sites
   * filename = input20.txt
