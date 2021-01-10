@@ -175,25 +175,6 @@ public class Point implements Comparable<Point> {
     		StdOut.println("p slope: " + p.slopeTo(points[i]));
     		StdOut.println("compare to p: " + p.compareTo(points[i]));
     	}
-//    	for (int i = 0; i < 5; i++) {
-//    		for (int j = i + 1; j < 5; j++) {
-//    			if (j == 2) {
-//					i = 4;
-//				}
-//    			StdOut.println("j="+j); 
-//    		}
-//    		StdOut.println("i="+i); 
-//    	}
-//    	// output: 1 2 3 4
-//    	/*
-//    	 * j=1
-//    	 * j=2
-//    	 * j=3
-//    	 * j=4
-//    	 * i=4
-//    	 * */
-//    	// i = 0 j = 1 2  i = 4 此时循环里的j还是遵循 i=0 在进行，继续输出 3 4 然后第一次内循环结束，此时意识到i = 4 j = 5 stop
-//    	
     	
     }
 
