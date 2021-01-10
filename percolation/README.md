@@ -1,16 +1,17 @@
 # Percolation
 Coursework Specification: <a href="https://coursera.cs.princeton.edu/algs4/assignments/percolation/specification.php" target="_blank">https://coursera.cs.princeton.edu/algs4/assignments/percolation/specification.php</a>
 
+Score: 91 (Dec 30, 2020)
 
-The biggest improvement is change size of **WeightedQuickUnionUF** from `n*n` to `n*n+2`. In this case, I don't have to use nested `for-loops` (two `for` loops) to retrieve all connection relationships between current node and upside nodes (first line nodes) or between upside nodes and downside nodes (second line nodes).
+The biggest improvement is to change size of **WeightedQuickUnionUF** from `n*n` to `n*n+2`. In this case, I don't have to use nested `for-loops` (two `for` loops) to retrieve all connection relationships between the current node and upside nodes (first line nodes) or between upside nodes and downside nodes (second line nodes).
 That is, `isFull` and `percolates` in **Percolation.java** will save more resources. 
 
 
-Basically, I use two extra nodes (as you may noticed my declaration of size of **WeightedQuickUnionUF**). One is the root of the first line nodes, another is the root of the last line nodes.
+Basically, I use two extra nodes (as you may notice my declaration of the size of **WeightedQuickUnionUF**). One is the root of the first line nodes, another is the root of the last line nodes.
 Therefore, I can check `isFull` by checking whether current node and the first line root are connected (`WeightedQuickUnionUF.find(up_root) == WeightedQuickUnionUF.find(current_open_node)`).
 Similarly, `percolates` just need to check two roots are connected (`WeightedQuickUnionUF.find(up_root) == WeightedQuickUnionUF.find(down_root)`).
 
-I defined the roots as the last two nodes in array. You can choose other indexes as you like.
+I defined the roots as the last two nodes in the array. You can choose other indexes as you like.
 
 
 Some failed checks of my code:
