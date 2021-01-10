@@ -2,6 +2,8 @@
 
 Course Spercification: <a href="https://coursera.cs.princeton.edu/algs4/assignments/queues/specification.php" target="_blank">https://coursera.cs.princeton.edu/algs4/assignments/queues/specification.php</a>
 
+Score: 91 (Dec 30, 2020)
+
 Deque is implemented by a data structure which is slightly simialr to linked list. I just define additional variable to store the pointer that refers to the previous node.
 Randomized queue is implemented by an array. In Java, we can't initialize an array without a defined size. So I give a size `50`. When enqueing new items, we can just
 check out the current number of items and resize (enlarge) the array. As introduced in the previous lecture, double the size is a good choice to save resources. 
