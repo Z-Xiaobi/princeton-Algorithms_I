@@ -10,7 +10,7 @@ check out the current number of items and resize (enlarge) the array. As introdu
 This code don't consider shrinking the array after some operations of deque. You can add it by your own ). 
 
 The problem is randomness, I didn't find an efficient way to give high randomness on an array. My implementation of Randomized Queue is not random. When increase the test set, 
-there are many identical results. Beside, as I used shuffle on array of [0,n), the running time is linear, which does not satisfy the running time requirement.
+there are many identical results. Besides, as I used shuffle on array of [0,n), the running time is linear, which does not satisfy the running time requirement.
 
 
 Some Failed Checks of My Code:
