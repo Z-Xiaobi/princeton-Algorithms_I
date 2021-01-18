@@ -4,9 +4,13 @@ Coursework Specification: <a href="https://coursera.cs.princeton.edu/algs4/assig
 Score: 91 (Jan 18, 2021)
 
 **Brute Force**
+
+
 Just use java.util.TreeSet to store points and traverse the whole set to find the target point(s). O(N)
 
 **2d Tree**
+
+
 Inner class KdNode includes:
 ```
 Key: Point2D point
